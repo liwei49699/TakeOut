@@ -1,16 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+
+    compileSdkVersion 24
     buildToolsVersion "26.0.1"
+
     defaultConfig {
         applicationId "demo.com.takeout"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,11 +22,30 @@ android {
     }
 }
 
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:24.1.1'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile name:'SMSSDK-3.0.0',ext:'aar'
+    compile name:'SMSSDKGUI-3.0.0',ext:'aar'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.picasso:picasso:2.3.2'	// picasso异步加载图片
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar' //包含轮播图自动轮训的自定义控件
+    //底部弹出窗体
+    compile 'com.flipboard:bottomsheet-commons:1.5.1'
+    compile 'com.flipboard:bottomsheet-core:1.5.1'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
 }
