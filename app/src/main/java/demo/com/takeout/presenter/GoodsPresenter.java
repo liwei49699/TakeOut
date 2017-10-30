@@ -21,6 +21,7 @@ import retrofit2.Call;
  */
 
 public class GoodsPresenter extends BasePresenter {
+
     private GoodsAdapter goodsAdapter;
     private Seller seller;
     private GoodsTypeAdapter goodsTypeAdapter;

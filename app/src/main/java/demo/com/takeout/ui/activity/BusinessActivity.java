@@ -23,6 +23,7 @@ import demo.com.takeout.ui.adapter.BusinessFragmentPagerAdapter;
  * Created by HASEE on 2017/1/10.
  */
 public class BusinessActivity extends BaseActivity {
+
     @InjectView(R.id.ib_back)
     ImageButton ibBack;
     @InjectView(R.id.tv_title)
@@ -80,6 +81,7 @@ public class BusinessActivity extends BaseActivity {
     }
 
     private void initTab() {
+
         for (int i = 0; i < stringArry.length; i++) {
             tabs.addTab(tabs.newTab().setText(stringArry[i]));
         }

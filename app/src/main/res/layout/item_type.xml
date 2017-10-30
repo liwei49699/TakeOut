@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
       />
+
     <TextView
         android:layout_width="80dp"
         android:layout_height="wrap_content"

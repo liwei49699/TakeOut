@@ -132,10 +132,29 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter {
             for (int i = 0; i < promotionList.size(); i++) {
                 TextSliderView textSliderView = new TextSliderView(mCtx);
                 // initialize a SliderLayout
-                textSliderView
-                        .description(promotionList.get(i).getInfo())//给轮播图的每一个图片,添加描述文字
-                        .image(promotionList.get(i).getPic())//指定图片
-                        .setScaleType(BaseSliderView.ScaleType.Fit);//ScaleType设置图片展示方式(fitxy  centercrop)
+                switch (i) {
+                    case 0 :
+
+                        textSliderView
+                                .description(promotionList.get(i).getInfo())//给轮播图的每一个图片,添加描述文字
+                                .image("http://192.168.0.7:8080/TakeoutServiceVersion2/imgs/promotion/1.jpg")//指定图片
+                                .setScaleType(BaseSliderView.ScaleType.Fit);//ScaleType设置图片展示方式(fitxy  centercrop)
+                        break;
+                    case 1 :
+                        textSliderView
+                                .description(promotionList.get(i).getInfo())//给轮播图的每一个图片,添加描述文字
+                                .image("http://192.168.0.7:8080/TakeoutServiceVersion2/imgs/promotion/2.jpg")//指定图片
+                                .setScaleType(BaseSliderView.ScaleType.Fit);//ScaleType设置图片展示方式(fitxy  centercrop)
+
+                        break;
+                    case 2 :
+                        textSliderView
+                                .description(promotionList.get(i).getInfo())//给轮播图的每一个图片,添加描述文字
+                                .image("http://192.168.0.7:8080/TakeoutServiceVersion2/imgs/promotion/3.jpg")//指定图片
+                                .setScaleType(BaseSliderView.ScaleType.Fit);//ScaleType设置图片展示方式(fitxy  centercrop)
+                        break;
+                }
+
 
                 //向SliderLayout控件的内部添加条目
                 slider.addSlider(textSliderView);

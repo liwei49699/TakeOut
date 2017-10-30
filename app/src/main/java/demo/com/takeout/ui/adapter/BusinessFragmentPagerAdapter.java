@@ -17,6 +17,7 @@ import demo.com.takeout.ui.fragment.SuggestFragment;
  * Created by HASEE on 2017/1/10.
  */
 public class BusinessFragmentPagerAdapter extends FragmentPagerAdapter{
+
     private Seller seller;
     private  String[] mStringArry;
     private  ArrayList<Fragment> fragmentList;

@@ -34,6 +34,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
 
+        <activity android:name=".ui.activity.BusinessActivity"/>
         <!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
         <!--<meta-data android:name="Mob-AppKey" android:value="21f8e0883e73c"/>
         <meta-data android:name="Mob-AppSecret" android:value="ea5dec86e217a4ab163215643bc87546"/>-->
